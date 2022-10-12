@@ -1,0 +1,109 @@
+:root {
+  --primaryColor: #062863;
+  --white: #ffffff;
+  --inputBg: #edf2f7;
+  --inputText: #1a202c;
+  --textColor: #4a5568;
+  --btnbg: #0d60d8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 100%;
+  background-color: var(--inputBg);
+  border: none;
+  outline: none;
+  padding: 1em;
+  color: var(--inputText);
+  border-radius: 0.5em;
+}
+.loginPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primaryColor);
+  background-image: url(../../Assets/Png/loginLeftTopBg.png),
+  url(../../Assets/Png/loginRightTopBg.png),
+  url(../../Assets/Png/loginLeftBottomBg.png),
+    url(../../Assets/Png/loginRightBottomBg.png);
+  background-position: left -1% top -15%, right -7.5% top -1%,
+    left -5% bottom -10%, right -5% bottom -5%;
+  background-position-x: left -1%, right -7.5%, left -5%, right -5%;
+  background-position-y: top -15%, top -1%, bottom -10%, bottom -5%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 15%, 15%, 15%, 15%;
+  padding: 3em 0;
+}
+.container {
+  width: 100%;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+}
+.header img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 3em;
+}
+.login {
+  /* width: 100%; */
+  height: auto;
+  padding: 3em;
+  background-color: var(--white);
+  max-width: 28em;
+  border-radius: 1.25rem 1.25rem 1.25rem 0;
+  flex-direction: column;
+}
+.formHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+.formHead h1{
+    font-size: 1.5em;
+    color: var(--primaryColor);
+    font-weight: 700;
+}
+.formHead p{
+    font-size: .875em;
+    color: var(--textColor);
+}
+.login form {
+  height: auto;
+  border-radius: 1.25rem 1.25rem 1.25rem 0;
+  flex-direction: column;
+  gap: 2em;
+}
+.formGroup {
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+label {
+  font-size: 0.75em;
+  line-height: 2;
+  color: var(--textColor);
+  margin-bottom: 0.25em;
+  font-weight: 700;
+  cursor: default;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--btnbg);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5em 0.5em 0.5em 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
