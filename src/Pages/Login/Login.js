@@ -13,18 +13,20 @@ const Login = () => {
   const validate = (values) => {
     const errors = {};
 
-    // if (!values.email) {
-    //   errors.email = "Required";
-    // } else if (values.email.length < 4) {
-    //   errors.email = "Must be 5 characters or more";
-    // }
     if (!values.email) {
       errors.email = "Required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-      errors.email = "Invalid email address";
+    } else if (values.email.length < 4) {
+      errors.email = "Must be 5 characters or more";
     }
+
+    // if (!values.email) {
+    //   errors.email = "Required";
+    // } else if (
+    //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    //
+    // ) {
+    //   errors.email = "Invalid email address or Phone no";
+    // }
 
     if (!values.password) {
       errors.password = "Required";
@@ -42,11 +44,11 @@ const Login = () => {
       password: "",
     },
     validate,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       // alert(JSON.stringify(values, null, 2));
       toast.success(JSON.stringify(values, null, 2), {
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 5000,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
@@ -54,6 +56,7 @@ const Login = () => {
         progress: undefined,
         theme: "colored",
       });
+      resetForm({ values: "" });
     },
   });
 
@@ -77,7 +80,7 @@ const Login = () => {
               value={formik.values.email}
               onBlur={formik.handleBlur}
               className="input"
-              type="email"
+              type="text"
               name="email"
               required
             />
@@ -116,7 +119,7 @@ const Login = () => {
       <Link className="footLink forget">Forgot Password?</Link>
       <ToastContainer
         position="top-right"
-        autoClose={2000}
+        autoClose={5000}
         hideProgressBar
         newestOnTop
         closeOnClick

@@ -39,7 +39,9 @@ const Signup = () => {
     } else if (values.password === "12345678") {
       errors.password = "Password must not be 12345678!!!";
     }
+
     // referrer
+
     // if (!pattern.test(values.referrer)) {
     //   errors.referrer = "Please enter only number.";
     // } else if (values.referrer.length !== 10 || values.referrer.length > 6) {
@@ -59,11 +61,11 @@ const Signup = () => {
       referralSource: "",
     },
     validate,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       // alert(JSON.stringify(values, null, 2));
       toast.success(JSON.stringify(values, null, 2), {
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 5000,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
@@ -71,6 +73,7 @@ const Signup = () => {
         progress: undefined,
         theme: "colored",
       });
+      resetForm({ values: "" });
     },
   });
 
@@ -275,7 +278,7 @@ const Signup = () => {
       </Link>
       <ToastContainer
         position="top-right"
-        autoClose={2000}
+        autoClose={5000}
         hideProgressBar
         newestOnTop
         closeOnClick
