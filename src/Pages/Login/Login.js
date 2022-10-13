@@ -80,7 +80,7 @@ const Login = () => {
               value={formik.values.email}
               onBlur={formik.handleBlur}
               className="input"
-              type="email"
+              type="text"
               name="email"
               required
             />
