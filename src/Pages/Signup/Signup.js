@@ -63,17 +63,19 @@ const Signup = () => {
     validate,
     onSubmit: (values, { resetForm }) => {
       // alert(JSON.stringify(values, null, 2));
-      toast.success(JSON.stringify(values, null, 2), {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-      resetForm({ values: "" });
+      setTimeout(() => {
+        toast.success(JSON.stringify(values, null, 2), {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        resetForm({ values: "" });
+      }, 2000);
     },
   });
 
