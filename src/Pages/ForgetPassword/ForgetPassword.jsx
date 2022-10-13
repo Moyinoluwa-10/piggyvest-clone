@@ -35,7 +35,7 @@ const ForgetPassword = () => {
     onSubmit: (values, { resetForm }) => {
       setTimeout(() => {
         // alert(JSON.stringify(values, null, 2));
-        toast.success(JSON.stringify(values, null, 2), {
+        toast.warning("Dont Forget your password next time" + JSON.stringify(values, null, 2), {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: true,
