@@ -5,34 +5,40 @@
   --inputText: #1a202c;
   --textColor: #4a5568;
   --btnbg: #0d60d8;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
+  --footHoverColor: rgb(179, 179, 179);
+  --footColor: rgb(255, 255, 255);
+  --h1Color: #083e9e;
+  --createBtn: rgb(8, 62, 158);
+  --error: red;
 }
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-input {
+.input,
+.referralSource {
   width: 100%;
   background-color: var(--inputBg);
   border: none;
   outline: none;
-  padding: 1em;
+  padding: 1rem 0.5rem 1rem 1rem;
   color: var(--inputText);
-  border-radius: 0.5em;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
 }
-.loginPage {
+.referralSource {
+  cursor: pointer;
+}
+.loginPage,
+.signUp {
   width: 100vw;
   height: 100vh;
+  overflow: auto;
   background-color: var(--primaryColor);
   background-image: url(../../Assets/Png/loginLeftTopBg.png),
-  url(../../Assets/Png/loginRightTopBg.png),
-  url(../../Assets/Png/loginLeftBottomBg.png),
+    url(../../Assets/Png/loginRightTopBg.png),
+    url(../../Assets/Png/loginLeftBottomBg.png),
     url(../../Assets/Png/loginRightBottomBg.png);
   background-position: left -1% top -15%, right -7.5% top -1%,
     left -5% bottom -10%, right -5% bottom -5%;
@@ -40,70 +46,118 @@ input {
   background-position-y: top -15%, top -1%, bottom -10%, bottom -5%;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 15%, 15%, 15%, 15%;
-  padding: 3em 0;
-}
-.container {
-  width: 100%;
+  padding: 3rem 0;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
-.header {
-  width: 100%;
+.container {
+  /* width: 100%; */
+  flex-direction: column;
 }
 .header img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
+  display: block;
 }
 .login {
-  /* width: 100%; */
-  height: auto;
-  padding: 3em;
+  width: 100%;
+  /* height: auto; */
+  padding: 2rem 2rem 2.5rem 2rem !important;
   background-color: var(--white);
-  max-width: 28em;
+  max-width: 28rem;
   border-radius: 1.25rem 1.25rem 1.25rem 0;
   flex-direction: column;
 }
-.formHead{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2em;
+.formHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
-.formHead h1{
-    font-size: 1.5em;
-    color: var(--primaryColor);
-    font-weight: 700;
+.formHead h1 {
+  font-size: 1.25rem;
+  color: var(--h1Color);
+  font-weight: 700;
+  text-align: center;
 }
-.formHead p{
-    font-size: .875em;
-    color: var(--textColor);
+.formHead p {
+  font-size: 0.875rem;
+  color: var(--textColor);
+  text-align: center;
 }
 .login form {
   height: auto;
   border-radius: 1.25rem 1.25rem 1.25rem 0;
   flex-direction: column;
-  gap: 2em;
+  gap: 2rem;
+  width: 100%;
 }
 .formGroup {
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
 }
-label {
-  font-size: 0.75em;
+.label {
+  font-size: 0.75rem;
   line-height: 2;
   color: var(--textColor);
-  margin-bottom: 0.25em;
+  margin-bottom: 0.25rem;
   font-weight: 700;
   cursor: default;
 }
-input[type="submit"] {
+.loginLink {
+  width: 100%;
+}
+.error {
+  color: var(--error);
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+.button {
   width: 100%;
   background-color: var(--btnbg);
   color: var(--white);
   border: none;
-  border-radius: 0.5em 0.5em 0.5em 0;
+  border-radius: 0.5rem 0.5rem 0.5rem 0;
   cursor: pointer;
   white-space: nowrap;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem 2.5rem 0.75rem 2.5rem;
+  font-weight: 700;
+}
+.button:hover {
+  background-color: var(--primaryColor);
+}
+.footLink {
+  color: var(--footColor);
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: 400;
+}
+.forget {
+  margin-top: 1rem;
+}
+.footLink:hover {
+  color: var(--footHoverColor);
+}
+
+@media (min-width: 640px) {
+  .login {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .login {
+    width: 91.666667%;
+    height: auto;
+    padding: 2rem;
+    background-color: var(--white);
+    flex-direction: column;
+  }
 }

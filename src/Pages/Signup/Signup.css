@@ -1,0 +1,14 @@
+.signUp {
+  height: auto;
+}
+
+.link {
+  color: var(--inputBg);
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--btnbg);
+}
+.button{
+    background-color: var(--createBtn)
+}
