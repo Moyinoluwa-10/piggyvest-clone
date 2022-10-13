@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 .loginPage,
-.signUp {
+.signUp, .forgetPage {
   width: 100vw;
   height: 100vh;
   overflow: auto;
@@ -102,6 +102,7 @@
   width: 100%;
 }
 .label {
+  width: 100%;
   font-size: 0.75rem;
   line-height: 2;
   color: var(--textColor);

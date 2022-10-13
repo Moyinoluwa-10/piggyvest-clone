@@ -75,7 +75,7 @@ const Signup = () => {
           theme: "colored",
         });
         resetForm({ values: "" });
-      }, 2000);
+      }, 500);
     },
   });
 

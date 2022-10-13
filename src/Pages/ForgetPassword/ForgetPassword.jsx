@@ -1,14 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Login.css";
+import "./ForgetPassword.css";
 import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
-import { Link } from "react-router-dom";
 
-const Login = () => {
-  // const { register, handleSubmit } = useForm();
+const ForgetPassword = () => {
   const validate = (values) => {
     const errors = {};
 
@@ -18,21 +16,12 @@ const Login = () => {
       errors.email = "Must be 5 characters or more";
     }
 
-    // if (!values.email) {
-    //   errors.email = "Required";
-    // } else if (
-    //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    //
-    // ) {
-    //   errors.email = "Invalid email address or Phone no";
-    // }
-
-    if (!values.password) {
-      errors.password = "Required";
-    } else if (values.password.length < 8) {
-      errors.password = "Password must be 8 characters or more";
-    } else if (values.password === "12345678") {
-      errors.password = "Password must not be 12345678!!!";
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "Invalid email address or Phone no";
     }
 
     return errors;
@@ -41,7 +30,6 @@ const Login = () => {
   const formik = useFormik({
     initialValues: {
       email: "",
-      password: "",
     },
     validate,
     onSubmit: (values, { resetForm }) => {
@@ -58,32 +46,35 @@ const Login = () => {
           theme: "colored",
         });
         resetForm({ values: "" });
-      }, 2000);
+      }, 500);
     },
   });
 
   return (
-    <div className="loginPage">
+    <div className="forgetPage">
       <Link className="header flex" to="/">
         <img src={LogoWhite} alt="" />
       </Link>
+
       <div className="login flex">
         <div className="formHead flex">
-          <h1>Login to your account</h1>
-          <p>Securely login to your PiggyVest</p>
+          <h1>Forget Password</h1>
+          <p>Enter your email to reset your password</p>
         </div>
+
         <form className="flex" onSubmit={formik.handleSubmit}>
           <div className="formGroup flex">
             <label className="label" htmlFor="email">
-              Email or Phone Number
+              Email Address
             </label>
             <input
               onChange={formik.handleChange}
               value={formik.values.email}
               onBlur={formik.handleBlur}
               className="input"
-              type="text"
+              type="email"
               name="email"
+              placeholder="e.g. john@gmail.com"
               required
             />
             {formik.touched.email && formik.errors.email ? (
@@ -91,34 +82,15 @@ const Login = () => {
             ) : null}
             {/* <small className="textDanger">Email is Required</small> */}
           </div>
-          <div className="formGroup flex">
-            <label className="label" htmlFor="password">
-              Password
-            </label>
-            <input
-              onChange={formik.handleChange}
-              value={formik.values.password}
-              onBlur={formik.handleBlur}
-              className="input"
-              type="password"
-              name="password"
-              required
-            />
-            {formik.touched.password && formik.errors.password ? (
-              <div className="error">{formik.errors.password}</div>
-            ) : null}
-          </div>
 
-          <button className="button" type="submit">
-            LOG IN
+          <button className="button flex" type="submit">
+            RESET PASSWORD
           </button>
         </form>
       </div>
-
-      <Link to="/signup" className="footLink">
-        Don't have an account? Register
+      <Link to="/login" className="footLink forget">
+        Back to login
       </Link>
-      <Link className="footLink forget">Forgot Password?</Link>
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -135,4 +107,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgetPassword;
