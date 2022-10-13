@@ -3,7 +3,6 @@ import React from "react";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import { useForm } from "react-hook-form";
 import "./Login.css";
 import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
 import { Link } from "react-router-dom";
@@ -38,6 +37,7 @@ const Login = () => {
 
     return errors;
   };
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -45,18 +45,20 @@ const Login = () => {
     },
     validate,
     onSubmit: (values, { resetForm }) => {
-      // alert(JSON.stringify(values, null, 2));
-      toast.success(JSON.stringify(values, null, 2), {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-      resetForm({ values: "" });
+      setTimeout(() => {
+        // alert(JSON.stringify(values, null, 2));
+        toast.success(JSON.stringify(values, null, 2), {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        resetForm({ values: "" });
+      }, 2000);
     },
   });
 
