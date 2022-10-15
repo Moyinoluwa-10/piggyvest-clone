@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,7 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
 import "./Signup.css";
 
+
+
+
 const Signup = () => {
+  useEffect(() => {
+    document.title = "PiggyVest | Dashboard"
+  }, [])
+
   const validate = (values) => {
     const errors = {};
     // fullname

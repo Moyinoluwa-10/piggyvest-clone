@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
@@ -8,6 +8,9 @@ import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  useEffect(() => {
+    document.title = "PiggyVest | Dashboard"
+  }, [])
   // const { register, handleSubmit } = useForm();
   const validate = (values) => {
     const errors = {};
@@ -115,7 +118,7 @@ const Login = () => {
         </form>
       </div>
 
-      <Link to="/signup" className="footLink">
+      <Link to="/register" className="footLink">
         Don't have an account? Register
       </Link>
       <Link to='/forget-password' className="footLink forget">Forgot Password?</Link>
