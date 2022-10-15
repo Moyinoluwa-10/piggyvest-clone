@@ -1,0 +1,159 @@
+
+@font-face {
+    font-family: "U8-Bold";
+    src: url('../../Assets/fonts/Fatype_U8/Fatype_U8/U8-Bold.otf') format("opentype");
+}
+
+.invest .btn {
+    font-size: 16.5px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    padding: 16px 22px;
+    border-radius: 12px;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    transition: all .8s;  
+}
+
+.invest .btn-signup {
+    background: #0c1825;
+    color: #fff ;
+}
+
+.invest .btn-signup:hover {
+    background: #0d60d8;
+}
+
+.invest .invest-box {
+    padding: 170px 16px 100px;
+    width: 1165px;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.invest .section-container {
+    /* min-width: 400px; */
+    max-width: 500px;
+}
+
+.invest .invest-box h1 {
+    font-size: 65px;
+    line-height: 82.42px;
+    margin-top: -20px;
+    font-family: "U8-Bold", sans-serif;
+    font-weight: 700;
+    color: #0c1825;
+}
+
+.invest .invest-box p {
+    font-family: "DM Sans", sans-serif;
+    color: #353535;
+    line-height: 27.2px;
+    font-size: 16.5px;
+    margin-bottom: 40px;
+}
+
+.invest .secc {
+    position: relative;
+    /* width: 450px; */
+}
+
+.invest .headerImg{
+    position: absolute;
+    max-width: 362px;
+    height: 500px;
+    top: 38px;
+    left: -13%;
+}
+
+.invest .headerIcon{
+    position: absolute;
+    max-width: 215px;
+    top: 170px;
+    left: -40%;
+}
+
+.invest .card{
+    position: absolute;
+    max-width: 215px;
+    bottom: 50px;
+    right: -17%;
+}
+
+.invest .dot{
+    position: absolute;
+    top: 61%;
+    left: -17%;
+    width: 33px;
+    height: 108px;
+    fill: none;
+}
+
+
+.invest .circle{
+    position: absolute;
+    top: 170px;
+    right: 8%;
+    width: 41px;
+    height: 41px;
+    fill: none;
+}
+
+
+.invest .cross{
+    position: absolute;
+    top: 2px;
+    left: -23%;
+    width: 75px;
+    height: 75px;
+    fill: none;
+    margin-right: 10px;
+}
+
+.invest .btn-download {
+    position: relative;
+    top: 0.5px;
+    color: #0c1825!important;
+    padding: 14.5px 16px!important;
+    border: 1px solid #ddd!important;
+    border-radius: 12px!important;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    font-weight: 500;
+    width: 53px;
+    white-space: nowrap;
+    height: 53px;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.invest .btn-download:hover {
+    top: -5px;
+    border: 1px solid #bbb!important;
+}
+
+.invest .btn-download img {
+    margin-bottom: -6px;
+    margin-right: 3px;
+}
+
+.invest .download-box {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+
+
+
+
+
+
+

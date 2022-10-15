@@ -1,7 +1,7 @@
 # Piggyvest Clone
 ## How to contribute
 
-- Clone the repository into your folder choice
+- Clone the repository into your folder choice by running ```git clone https://github.com/Moyinoluwa-10/Piggyvest-Clone.git```
 - Run ```git checkout [your name]```
 - This will switch you to the [your] branch
 - Run ```npm install``` (to install neccessary dependencies)

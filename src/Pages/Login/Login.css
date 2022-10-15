@@ -11,6 +11,7 @@
   --createBtn: rgb(8, 62, 158);
   --error: red;
 }
+
 .flex {
   display: flex;
   justify-content: center;
@@ -52,6 +53,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .container {
   /* width: 100%; */
   flex-direction: column;
@@ -62,6 +64,7 @@
   margin-bottom: 3rem;
   display: block;
 }
+
 .login {
   width: 100%;
   /* height: auto; */
@@ -89,6 +92,7 @@
   color: var(--textColor);
   text-align: center;
 }
+
 .login form {
   height: auto;
   border-radius: 1.25rem 1.25rem 1.25rem 0;
@@ -96,6 +100,7 @@
   gap: 2rem;
   width: 100%;
 }
+
 .formGroup {
   align-items: flex-start;
   flex-direction: column;

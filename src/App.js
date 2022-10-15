@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path={"/"} element={<Landingpage />} />
-        <Route exact path={"/signup"} element={<Signup />} />
+        <Route exact path={"/register"} element={<Signup />} />
         <Route exact path={"/login"} element={<Login />} />
         <Route exact path={"/forget-password"} element={<ForgetPassword />} />
 
