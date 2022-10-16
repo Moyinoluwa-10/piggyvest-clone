@@ -1,22 +1,26 @@
-import React, {useEffect} from "react";
-
+import React, { useEffect, useRef } from "react";
+import "./Login.css";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Login.css";
 import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
-import { Link } from "react-router-dom";
 
 const Login = () => {
+  const emailRef = useRef();
+
   useEffect(() => {
-    document.title = "PiggyVest | Dashboard"
-  }, [])
+    document.title = "PiggyVest | Dashboard";
+    emailRef.current.focus();
+  }, []);
+
   // const { register, handleSubmit } = useForm();
+
   const validate = (values) => {
     const errors = {};
 
     if (!values.email) {
-      errors.email = "Required";
+      errors.email = "Please fill out this field";
     } else if (values.email.length < 4) {
       errors.email = "Must be 5 characters or more";
     }
@@ -31,7 +35,7 @@ const Login = () => {
     // }
 
     if (!values.password) {
-      errors.password = "Required";
+      errors.password = "Please fill out this field";
     } else if (values.password.length < 8) {
       errors.password = "Password must be 8 characters or more";
     } else if (values.password === "12345678") {
@@ -47,19 +51,22 @@ const Login = () => {
       password: "",
     },
     validate,
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: ({ resetForm }) => {
       setTimeout(() => {
         // alert(JSON.stringify(values, null, 2));
-        toast.success(JSON.stringify(values, null, 2), {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        toast.success(
+          JSON.stringify("Login details submitted successfully", null, 2),
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          }
+        );
         resetForm({ values: "" });
       }, 500);
     },
@@ -87,12 +94,13 @@ const Login = () => {
               className="input"
               type="text"
               name="email"
+              ref={emailRef}
               required
+              autoComplete="email address / phone number"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="error">{formik.errors.email}</div>
             ) : null}
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <div className="formGroup flex">
             <label className="label" htmlFor="password">
@@ -106,6 +114,7 @@ const Login = () => {
               type="password"
               name="password"
               required
+              autoComplete="current-password"
             />
             {formik.touched.password && formik.errors.password ? (
               <div className="error">{formik.errors.password}</div>
@@ -121,7 +130,10 @@ const Login = () => {
       <Link to="/register" className="footLink">
         Don't have an account? Register
       </Link>
-      <Link to='/forget-password' className="footLink forget">Forgot Password?</Link>
+      <Link to="/forget-password" className="footLink forget">
+        Forgot Password?
+      </Link>
+
       <ToastContainer
         position="top-right"
         autoClose={5000}
