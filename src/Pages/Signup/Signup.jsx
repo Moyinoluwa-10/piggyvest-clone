@@ -1,31 +1,28 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
+import "../Login/Login.css";
+import "./Signup.css";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
-import "./Signup.css";
-
-
-
 
 const Signup = () => {
   useEffect(() => {
-    document.title = "PiggyVest | Dashboard"
-  }, [])
+    document.title = "PiggyVest | Dashboard";
+  }, []);
 
   const validate = (values) => {
     const errors = {};
     // fullname
     if (!values.fullName) {
-      errors.fullName = "Required";
+      errors.fullName = "Please fill out this field";
     } else if (values.fullName.length < 5) {
       errors.fullName = "Must be 5 characters or more";
     }
     // email
     if (!values.email) {
-      errors.email = "Required";
+      errors.email = "Please fill out this field";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
@@ -40,7 +37,7 @@ const Signup = () => {
     }
     // password
     if (!values.password) {
-      errors.password = "Required";
+      errors.password = "Please fill out this field";
     } else if (values.password.length < 8) {
       errors.password = "Password must be 8 characters or more";
     } else if (values.password === "12345678") {
@@ -114,7 +111,6 @@ const Signup = () => {
             {formik.touched.fullName && formik.errors.fullName ? (
               <div className="error">{formik.errors.fullName}</div>
             ) : null}
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <div className="formGroup flex">
             <label className="label" htmlFor="email">
@@ -133,7 +129,6 @@ const Signup = () => {
             {formik.touched.email && formik.errors.email ? (
               <div className="error">{formik.errors.email}</div>
             ) : null}
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <div className="formGroup flex">
             <label className="label" htmlFor="phoneNo">
@@ -153,7 +148,6 @@ const Signup = () => {
             {formik.touched.phoneNo && formik.errors.phoneNo ? (
               <div className="error">{formik.errors.phoneNo}</div>
             ) : null}
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <div className="formGroup flex">
             <label className="label" htmlFor="password">
@@ -172,7 +166,6 @@ const Signup = () => {
             {formik.touched.password && formik.errors.password ? (
               <div className="error">{formik.errors.password}</div>
             ) : null}
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <div className="formGroup flex">
             <label className="label" htmlFor="referrer">
@@ -190,13 +183,11 @@ const Signup = () => {
             {formik.touched.referrer && formik.errors.referrer ? (
               <div className="error">{formik.errors.referrer}</div>
             ) : null}
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <div className="formGroup flex">
             <label className="label" htmlFor="referralSource">
               How Did You Hear About Us? (Optional)
             </label>
-            {/* <input className="input" type="number" name="referrer" /> */}
             <select
               onChange={formik.handleChange}
               value={formik.values.referralSource}
@@ -274,7 +265,6 @@ const Signup = () => {
                 Other
               </option>
             </select>
-            {/* <small className="textDanger">Email is Required</small> */}
           </div>
           <button className="button" type="submit">
             CREATE ACCOUNT
