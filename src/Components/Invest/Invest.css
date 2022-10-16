@@ -1,60 +1,10 @@
+
 @font-face {
     font-family: "U8-Bold";
     src: url('../../Assets/fonts/Fatype_U8/Fatype_U8/U8-Bold.otf') format("opentype");
 }
 
-.invest {
-    padding: 170px 16px 100px;
-    font-family: DM Sans, sans-serif;
-    color: #353535;
-    line-height: 27.2px;
-    font-size: 16.5px;
-}
-
-.invest .container {
-    max-width: 1165px;
-    margin: auto;
-}
-
-.invest .row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.invest .left {
-    flex: 0 0 50%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 25px;
-}
-
-.invest .left .text {
-    max-width: 500px;
-}
-
-.invest .left .text h1 {
-    margin-top: -20px;
-    font-size: 65px;
-    line-height: 82.42px;
-    font-family: "U8-Bold", sans-serif;
-    font-weight: 700;
-    color: #0c1825;
-}
-
-.invest .left .text p {
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-
-.invest .left .box {
-    margin-top: 10px;
-}
-
-.invest .left .box .btn {
+.invest .btn {
     font-size: 16.5px;
     font-weight: 600;
     text-align: center;
@@ -63,44 +13,128 @@
     border-radius: 12px;
     -webkit-transition: all .8s;
     -moz-transition: all .8s;
-    transition: all .8s;
-    background: #0c1825;
-    color: #fff;
-    text-decoration: none;
+    transition: all .8s;  
 }
 
-.invest .left .box .btn:hover {
+.invest .btn-signup {
+    background: #0c1825;
+    color: #fff ;
+}
+
+.invest .btn-signup:hover {
     background: #0d60d8;
 }
 
-.invest .left .box .download {
-    margin-top: 50px;
+.invest .invest-box {
+    padding: 170px 16px 100px;
+    width: 1165px;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
-.invest .left .box .btn-download {
+.invest .section-container {
+    /* min-width: 400px; */
+    max-width: 500px;
+}
+
+.invest .invest-box h1 {
+    font-size: 65px;
+    line-height: 82.42px;
+    margin-top: -20px;
+    font-family: "U8-Bold", sans-serif;
+    font-weight: 700;
+    color: #0c1825;
+}
+
+.invest .invest-box p {
+    font-family: "DM Sans", sans-serif;
+    color: #353535;
+    line-height: 27.2px;
+    font-size: 16.5px;
+    margin-bottom: 40px;
+}
+
+.invest .secc {
+    position: relative;
+    /* width: 450px; */
+}
+
+.invest .headerImg{
+    position: absolute;
+    max-width: 362px;
+    height: 500px;
+    top: 38px;
+    left: -13%;
+}
+
+.invest .headerIcon{
+    position: absolute;
+    max-width: 215px;
+    top: 170px;
+    left: -40%;
+}
+
+.invest .card{
+    position: absolute;
+    max-width: 215px;
+    bottom: 50px;
+    right: -17%;
+}
+
+.invest .dot{
+    position: absolute;
+    top: 61%;
+    left: -17%;
+    width: 33px;
+    height: 108px;
+    fill: none;
+}
+
+
+.invest .circle{
+    position: absolute;
+    top: 170px;
+    right: 8%;
+    width: 41px;
+    height: 41px;
+    fill: none;
+}
+
+
+.invest .cross{
+    position: absolute;
+    top: 2px;
+    left: -23%;
+    width: 75px;
+    height: 75px;
+    fill: none;
+    margin-right: 10px;
+}
+
+.invest .btn-download {
     position: relative;
     top: 0.5px;
-    color: #0c1825;
-    padding: 14.5px 16px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    color: #0c1825!important;
+    padding: 14.5px 16px!important;
+    border: 1px solid #ddd!important;
+    border-radius: 12px!important;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
     font-weight: 500;
     width: 53px;
     white-space: nowrap;
     height: 53px;
-    margin-right: 16px;
-    font-weight: 500;
     font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
 }
 
 .invest .btn-download:hover {
     top: -5px;
-    border: 1px solid #bbb;
+    border: 1px solid #bbb!important;
 }
 
 .invest .btn-download img {
@@ -108,148 +142,18 @@
     margin-right: 3px;
 }
 
-.invest .right {
-    flex: 0 0 50%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+.invest .download-box {
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
-}
-
-.invest .right .box {
-    width: auto;
-    position: relative;
-}
-
-.invest .right .box .rectangle {
-    width: 100%;
-    max-width: 362px;
-    position: relative;
-    height: 572px;
-    left: 5%;
-}
-
-.invest .right .box .womanpic {
-    max-width: 362px;
-    border-radius: 16px;
-    height: 500px;
-    top: 38px;
-    left: -8%;
-    object-fit: cover;
-    width: 100%;
-    position: absolute;
-}
-
-.invest .right .box .rent {
-    position: absolute;
-    max-width: 215px;
-    left: -35%;
-    top: 170px;
-}
-
-.invest .right .box .investify {
-    position: absolute;
-    max-width: 215px;
-    right: -22%;
-    bottom: 50px
-}
-
-.invest .right .box .circle {
-    position: absolute;
-    top: 170px;
-    right: 0;
-    width: 41px;
-    height: 41px;
-    fill: none;
-    vertical-align: bottom;
-    margin-right: 10px;
-}
-
-.invest .right .box .cross {
-    position: absolute;
-    top: 2px;
-    left: -18%;
-    width: 75px;
-    height: 75px;
-    fill: none;
-    vertical-align: bottom;
-    margin-right: 10px;
-}
-
-.invest .right .box .dot {
-    position: absolute;
-    top: 61%;
-    left: -12%;
-    width: 33px;
-    height: 108px;
-    fill: none;
-    vertical-align: bottom;
-    margin-right: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
 }
 
 
-/* RESPONSIVENESS */
-@media screen and (max-width:1000px) {
-    .invest .row {
-        flex-direction: column;
-    }
-
-    .invest .left {
-        flex: unset;
-        text-align: center;
-        padding-bottom: 100px;
-        padding-left: 15px;
-    }
-
-    .invest .left .text {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .invest .left .text h1 {
-        font-size: 55px;
-        line-height: 72px;
-    }
-
-    .invest .right {
-        margin-bottom: 20px;
-    }
-}
 
 
-@media screen and (max-width:650px) {
-    .invest .right {
-        padding-right: 16px;
-        padding-left: 40px;
-        margin-bottom: 20px;
-    }
 
-    .invest .right .box .rectangle {
-        max-width: 90%;
-    }
 
-    .invest .right .box .womanpic {
-        max-width: 90%;
-    }
 
-    .invest .right .box .rent {
-        left: -22%;
-    }
 
-    .invest .right .box .investify {
-        right: 0;
-    }
-}
-
-@media screen and (max-width:476px) {
-    .invest .left .text h1 {
-        font-size: 45px;
-        line-height: 57px;
-    }
-
-    .invest .right {
-        padding-left: 70px;
-    }
-}

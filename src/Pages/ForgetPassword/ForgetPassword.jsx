@@ -1,31 +1,32 @@
-import React, { useEffect, useRef } from "react";
-import "../Login/Login.css";
-import "./ForgetPassword.css";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./ForgetPassword.css";
 import LogoWhite from "../../Assets/Svg/LogoWhite.svg";
 
 const ForgetPassword = () => {
-  const emailRef = useRef();
 
   useEffect(() => {
-    document.title = "PiggyVest | Dashboard";
-    emailRef.current.focus();
-  }, []);
+    document.title = "PiggyVest | Dashboard"
+  }, [])
 
   const validate = (values) => {
     const errors = {};
 
     if (!values.email) {
-      errors.email = "Please fill out this field";
-    } else if (values.email.length < 10) {
-      errors.email = "Must be 10 characters or more";
+      errors.email = "Required";
+    } else if (values.email.length < 4) {
+      errors.email = "Must be 5 characters or more";
+    }
+
+    if (!values.email) {
+      errors.email = "Required";
     } else if (
       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
     ) {
-      errors.email = "Invalid email address";
+      errors.email = "Invalid email address or Phone no";
     }
 
     return errors;
@@ -39,7 +40,7 @@ const ForgetPassword = () => {
     onSubmit: (values, { resetForm }) => {
       setTimeout(() => {
         // alert(JSON.stringify(values, null, 2));
-        toast.success(JSON.stringify("Password reset successfully", null, 2), {
+        toast.warning("Dont Forget your password next time" + JSON.stringify(values, null, 2), {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: true,
@@ -62,7 +63,7 @@ const ForgetPassword = () => {
 
       <div className="login flex">
         <div className="formHead flex">
-          <h1>Forgot Password</h1>
+          <h1>Forget Password</h1>
           <p>Enter your email to reset your password</p>
         </div>
 
@@ -80,11 +81,11 @@ const ForgetPassword = () => {
               name="email"
               placeholder="e.g. john@gmail.com"
               required
-              ref={emailRef}
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="error">{formik.errors.email}</div>
             ) : null}
+            {/* <small className="textDanger">Email is Required</small> */}
           </div>
 
           <button className="button flex" type="submit">
@@ -92,7 +93,7 @@ const ForgetPassword = () => {
           </button>
         </form>
       </div>
-      <Link to="/login" className="footLink">
+      <Link to="/login" className="footLink forget">
         Back to login
       </Link>
       <ToastContainer
