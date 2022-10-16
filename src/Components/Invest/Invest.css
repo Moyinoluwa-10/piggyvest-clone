@@ -252,4 +252,10 @@
     .invest .right {
         padding-left: 70px;
     }
+
+    .invest .left .box .btn-download {
+        display: block;
+        width: 165px;
+        margin: 20px auto;
+    }
 }
