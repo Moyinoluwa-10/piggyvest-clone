@@ -1,13 +1,11 @@
 @font-face {
     font-family: "U8-Bold";
-<<<<<<< Updated upstream
     src: url('../../Assets/fonts/Fatype_U8/Fatype_U8/U8-Bold.otf') format("opentype");
 }
 
 .headerpage .header {
     position: fixed;
     width: 100%;
-=======
     src: url("../../Assets/fonts/Fatype_U8/Fatype_U8/U8-Bold.otf")
       format("opentype");
   }
@@ -18,23 +16,17 @@
     position: fixed;
     width: 100%;
     height: 90px;
-  
->>>>>>> Stashed changes
     top: 0;
     left: 0;
     z-index: 20;
     padding: 17.5px 16px;
-<<<<<<< Updated upstream
     font-family: 'DM Sans', sans-serif;
-=======
     font-family: "DM Sans", sans-serif;
->>>>>>> Stashed changes
     background-color: #fff;
     box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.1);
     /* display: flex; */
     /* justify-content: content; */
     /* align-items: center; */
-<<<<<<< Updated upstream
 }
 
 .headerpage .header-container {
@@ -57,12 +49,7 @@
     margin: 0;
     padding: 0 50px 0 0 ;
     margin-top: -6px;
-}
-
-.headerpage .header-link {
-=======
-  }
-  
+}  
   .headerpage .header-container {
     display: flex;
     align-items: center;
@@ -89,25 +76,16 @@
     background-color: #fff;
   }
   .headerpage .header-link {
->>>>>>> Stashed changes
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 45px;
-<<<<<<< Updated upstream
-}
-
-.headerpage .header-link a {
-=======
-  }
-  
+} 
   .headerpage .header-link a {
->>>>>>> Stashed changes
     color: #0c1825;
     font-weight: 500;
     line-height: 27.2px;
     font-size: 16.5px;
-<<<<<<< Updated upstream
 }
 
 .headerpage .nav-link {
@@ -115,12 +93,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px; 
-} 
-
-.headerpage .btn {
-=======
-  }
-  
+}   
   .headerpage .nav-link {
     display: flex;
     align-items: center;
@@ -129,14 +102,12 @@
   }
   
   .headerpage .btn {
->>>>>>> Stashed changes
     font-size: 16.5px;
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
     padding: 16px 22px;
     border-radius: 12px;
-<<<<<<< Updated upstream
     -webkit-transition: all .8s;
     -moz-transition: all .8s;
     transition: all .8s;  
@@ -160,8 +131,6 @@
 .headerpage .btn-login:hover {
     color: #0d60d8;
     border: 1px solid #0d60d8;
-}
-=======
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
     transition: all 0.8s;
@@ -243,5 +212,3 @@
       display: flex;
     }
   }
-  
->>>>>>> Stashed changes
