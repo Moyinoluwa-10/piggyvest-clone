@@ -8,6 +8,8 @@ import Savings from "../../Components/Savings/Savings";
 import Investment from "../../Components/Investment/Investment";
 import Interact from "../../Components/Interact/Interact";
 import Customers from "../../Components/Customers/Customers";
+import Featured from "../../Components/Featured/Featured";
+import Footer from "../../Components/Footer/Footer";
 
 const Landingpage = () => {
   return (
@@ -19,6 +21,8 @@ const Landingpage = () => {
       <Investment />
       <Interact />
       <Customers />
+      <Featured />
+      <Footer />
     </div>
   );
 };
