@@ -25,7 +25,7 @@ const Invest = () => {
               </p>
             </div>
             <div className="box">
-              <Link to={"/signup"} className="btn btn-signup">
+              <Link to={"/register"} className="btn btn-signup">
                 Create free account
               </Link>
               <div className="download">
