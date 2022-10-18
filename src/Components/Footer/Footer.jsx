@@ -25,7 +25,7 @@ const Footer = () => {
             <Link to={"/"}>FAQs</Link>
             <Link to={"/"}>Blog</Link>
           </div>
-          <div className="works">
+          <div className="works legal">
             <p>Legal</p>
             <Link to={"/"}>Terms</Link>
             <Link to={"/"}>Privacy</Link>
@@ -35,13 +35,19 @@ const Footer = () => {
             <div className="socials">
               <ul>
                 <li>
-                  <i class="fa-brands fa-square-facebook"></i>
+                  <Link to="/">
+                    <i className="fa-brands fa-square-facebook"></i>
+                  </Link>
                 </li>
                 <li>
-                  <i class="fa-brands fa-square-twitter"></i>
+                  <Link to="/">
+                    <i className="fa-brands fa-square-twitter"></i>
+                  </Link>
                 </li>
                 <li>
-                  <i class="fa-brands fa-square-instagram"></i>
+                  <Link to="/">
+                    <i className="fa-brands fa-square-instagram"></i>
+                  </Link>
                 </li>
               </ul>
             </div>

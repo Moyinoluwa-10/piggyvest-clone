@@ -4,10 +4,10 @@ import "./Customer.css";
 import Apple from "../../images/apple.svg";
 import Google from "../../images/google.svg";
 
-import Tobenna from '../../images/TestimonialProfie/Tobenna.jpeg'
-import Micheal from '../../images/TestimonialProfie/Micheal F.jpeg'
-import Oluwadamilola from '../../images/TestimonialProfie/Oluwadamilola A.jpg'
-import Joseph from '../../images/TestimonialProfie/Joseph A.jpeg'
+import Tobenna from "../../images/TestimonialProfie/Tobenna.jpeg";
+import Micheal from "../../images/TestimonialProfie/Micheal F.jpeg";
+import Oluwadamilola from "../../images/TestimonialProfie/Oluwadamilola A.jpg";
+import Joseph from "../../images/TestimonialProfie/Joseph A.jpeg";
 
 const Customers = () => {
   return (
@@ -20,10 +20,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Thursday, 6th of October 2022 by 11:42 AM</small>
                   <div className="imgContent">
-                    <img
-                      src={Tobenna}
-                      alt=""
-                    />
+                    <img src={Tobenna} alt="" />
                     <div className="boxContent">
                       <h6>Tobenna A</h6>
                       <p>
@@ -37,10 +34,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Wednesday, 5th of October 2022 by 03:08 AM</small>
                   <div className="imgContent">
-                    <img
-                      src={Micheal}
-                      alt=""
-                    />
+                    <img src={Micheal} alt="" />
                     <div className="boxContent">
                       <h6>Micheal F</h6>
                       <p>
@@ -54,10 +48,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Tuesday, 4th of October 2022 by 18:01 PM</small>
                   <div className="imgContent">
-                    <img
-                      src={Oluwadamilola}
-                      alt=""
-                    />
+                    <img src={Oluwadamilola} alt="" />
                     <div className="boxContent">
                       <h6>Oluwadamilola A</h6>
                       <p>
@@ -72,10 +63,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Saturday, 24th of September 2022 by 19:58 PM</small>
                   <div className="imgContent">
-                    <img
-                      src={Joseph}
-                      alt=""
-                    />
+                    <img src={Joseph} alt="" />
                     <div className="boxContent">
                       <h6>Joseph A</h6>
                       <p>
@@ -88,10 +76,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Thursday, 6th of October 2022 by 11:42 AM</small>
                   <div className="imgContent">
-                    <img
-                      src={Tobenna}
-                      alt=""
-                    />
+                    <img src={Tobenna} alt="" />
                     <div className="boxContent">
                       <h6>Tobenna A</h6>
                       <p>
@@ -105,10 +90,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Wednesday, 5th of October 2022 by 03:08 AM</small>
                   <div className="imgContent">
-                    <img
-                      src={Micheal}
-                      alt=""
-                    />
+                    <img src={Micheal} alt="" />
                     <div className="boxContent">
                       <h6>Micheal F</h6>
                       <p>
@@ -122,10 +104,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Tuesday, 4th of October 2022 by 18:01 PM</small>
                   <div className="imgContent">
-                    <img
-                      src={Oluwadamilola}
-                      alt=""
-                    />
+                    <img src={Oluwadamilola} alt="" />
                     <div className="boxContent">
                       <h6>Oluwadamilola A</h6>
                       <p>
@@ -140,10 +119,7 @@ const Customers = () => {
                 <div className="box">
                   <small>Saturday, 24th of September 2022 by 19:58 PM</small>
                   <div className="imgContent">
-                    <img
-                      src={Joseph}
-                      alt=""
-                    />
+                    <img src={Joseph} alt="" />
                     <div className="boxContent">
                       <h6>Joseph A</h6>
                       <p>

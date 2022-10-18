@@ -1,6 +1,7 @@
 import React from "react";
 import "./Interact.css";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import ArrowCircle from "../../images/arrowcircle.svg";
+import { Link } from "react-router-dom";
 
 const Interact = () => {
   return (
@@ -17,10 +18,10 @@ const Interact = () => {
                 future responsibilities.
               </p>
             </div>
-            <div className="bottom">
-              <BsFillArrowRightCircleFill />
+            <Link className="bottom">
+              <img src={ArrowCircle} alt="arrow" className="arrow" />
               Meet Tito
-            </div>
+            </Link>
           </div>
         </div>
         <div className="right"></div>
