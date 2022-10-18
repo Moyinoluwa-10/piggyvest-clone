@@ -1,29 +1,35 @@
 @font-face {
   font-family: "U8-Bold";
-  src: url("../../Assets/fonts/Fatype_U8/Fatype_U8/U8-Bold.otf")
-    format("opentype");
+  src: url("../../Assets/fonts/Fatype_U8/Fatype_U8/U8-Bold.otf") format("opentype");
 }
 
 .customer {
-  padding: 6.25rem 1rem;
+  padding: 100px 16px;
+  font-family: DM Sans, sans-serif !important;
+  color: #353535;
+  line-height: 27.2px;
+  font-size: 16.5px;
 }
+
 .customerContainer {
   margin: auto;
-  width: 100%;
   max-width: 1165px;
 }
+
 .leftRight {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-wrap: wrap; */
-  margin: 0 0.9375rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
+
 .customer .customerContainer .leftRight .left {
+  flex: 0 0 45%;
   position: relative;
   width: 100%;
-  padding: 0 0.9375rem;
+  padding-right: 15px;
+  padding-left: 15px;
 }
+
 .testimonials {
   height: 100%;
   height: 400px;
@@ -33,14 +39,17 @@
   position: relative;
   width: auto;
 }
+
 @keyframes scroll {
   0% {
     top: 0px;
   }
+
   100% {
     top: 100%;
   }
 }
+
 .boxes {
   animation-name: scroll;
   animation-duration: 35s;
@@ -61,28 +70,29 @@
   gap: 1rem;
   overflow: hidden;
 }
+
 .testimonials::before {
   position: absolute;
   left: 0 !important;
   top: 0 !important;
 }
+
 .testimonials::after {
   position: absolute;
-  left: 0 ;
-  bottom: 0 ;
+  left: 0;
+  bottom: 0;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+
 .testimonials::before,
 .testimonials::after {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(hsla(0, 0%, 100%, 0))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(#fff),
+      to(hsla(0, 0%, 100%, 0)));
   background: -webkit-linear-gradient(top, #fff, hsla(0, 0%, 100%, 0));
   background: -moz-linear-gradient(top, #fff 0, hsla(0, 0%, 100%, 0) 100%);
   background: linear-gradient(180deg, #fff 0, hsla(0, 0%, 100%, 0));
@@ -91,13 +101,11 @@
   position: absolute;
   width: 100%;
   z-index: 2;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(hsla(0, 0%, 100%, 0))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(#fff),
+      to(hsla(0, 0%, 100%, 0)));
   background: -webkit-linear-gradient(top, #fff, hsla(0, 0%, 100%, 0));
   background: -moz-linear-gradient(top, #fff 0, hsla(0, 0%, 100%, 0) 100%);
   background: linear-gradient(180deg, #fff 0, hsla(0, 0%, 100%, 0));
@@ -107,6 +115,7 @@
   width: 100%;
   z-index: 2;
 }
+
 .customer .boxes .box {
   max-width: 420px;
   padding: 11px 17px 24px 18px !important;
@@ -121,59 +130,76 @@
   /* max-width: 352px; */
   /* margin-bottom: 45px!important; */
 }
+
 .customer .customerContainer .boxes .box small {
-    width: 100%;
+  width: 100%;
   font-size: 12px;
   color: #727272;
- text-align: end;
+  text-align: end;
 }
+
 .customer .customerContainer .boxes .box .imgContent {
   display: flex;
-  justify-content: center;align-items: center;gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-.customer .customerContainer .boxes .box .imgContent img{
+
+.customer .customerContainer .boxes .box .imgContent img {
   border-radius: 50%;
   object-fit: cover;
   height: 35px;
   width: 35px;
 }
 
-.customer .customerContainer .boxes .box .imgContent .boxContent h6{
-display: flex;
-justify-content: center;
-align-items: flex-start;
-gap: 1rem;
-flex-direction: column;
+.customer .customerContainer .boxes .box .imgContent .boxContent h6 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-direction: column;
 }
-.customer .customerContainer .boxes .box .imgContent .boxContent h6{
+
+.customer .customerContainer .boxes .box .imgContent .boxContent h6 {
   font-size: 12.82px;
   margin: 0;
-  font-family: U8-Bold!important;
+  font-family: U8-Bold !important;
   font-weight: 700;
   color: #0c1825;
 }
-.customer .customerContainer .boxes .box .imgContent .boxContent p{
+
+.customer .customerContainer .boxes .box .imgContent .boxContent p {
   font-size: 12px;
   line-height: 20px !important;
   margin: 0;
 }
 
 .customer .customerContainer .right {
+  position: relative;
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 55%;
+  display: flex;
+  align-items: center;
 }
+
 .customer .customerContainer .right .content {
   max-width: 420px;
-  color: #0c1825;
 }
+
 .customer .customerContainer .right h4 {
-  font-size: 32px;
+  font-size: 33px;
   line-height: 41.21px;
   margin: 0;
   font-weight: 700;
-  font-family: "U8-Bold";
+  color: #0c1825;
+  font-family: U8-Bold, sans-serif;
 }
+
 .customer .customerContainer .right p {
   margin: 13px 0 38px;
+  font-weight: 400;
 }
 
 .customer .box {
@@ -202,7 +228,7 @@ flex-direction: column;
 }
 
 .customer .box .download {
-  margin-top: 50px;
+  margin-top: 55px;
 }
 
 .customer .box .btn-download {
@@ -220,14 +246,13 @@ flex-direction: column;
   white-space: nowrap;
   height: 53px;
   margin-right: 16px;
-  font-weight: 500;
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .customer .btn-download:hover {
-  top: -5px;
   border: 1px solid #bbb;
 }
 
@@ -241,16 +266,18 @@ flex-direction: column;
   position: relative;
 }
 
-@media screen and (max-width: 992px) {
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1000px) {
   .customer {
-    text-align: center;
     position: relative;
-    margin-top: 180px;
   }
+
   .leftRight {
     flex-direction: column-reverse;
     gap: 2rem;
   }
+
   .customer .customerContainer .leftRight .left {
     position: relative;
     display: flex;
@@ -259,6 +286,7 @@ flex-direction: column;
     width: 100%;
     padding: 0 0.9375rem;
   }
+
   .customer .customerContainer .leftRight .right {
     position: relative;
     display: flex;
@@ -266,5 +294,32 @@ flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 0 0.9375rem;
+  }
+
+  .customer .customerContainer .right {
+    text-align: center;
+  }
+
+  .customer .customerContainer .right h4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+
+@media screen and (max-width:476px) {
+  .invest .left .text h1 {
+    font-size: 45px;
+    line-height: 57px;
+  }
+
+  .invest .right {
+    padding-left: 70px;
+  }
+
+  .customer .box .btn-download {
+    display: block;
+    width: 165px;
+    margin: 20px auto;
   }
 }
