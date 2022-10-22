@@ -1,3 +1,28 @@
-.hello {
-    font-size: 20px;
+
+
+
+white {
+    color: #fff!important;
 }
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section {
+    display: block;
+}
+
+    padding: 0;
+    margin: 0;
+    font-family: DM Sans,sans-serif!important;
+    color: #353535;
+    line-height: 27.2px;
+    font-size: 16.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
